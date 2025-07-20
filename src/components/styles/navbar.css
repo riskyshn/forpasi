@@ -1,0 +1,184 @@
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        color: #008080;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .language {
+        margin-top: 10px;
+    }
+}
+
+
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: linear-gradient(135deg, #b4d6d6, #ffffff);
+    border-bottom: 2px solid #008080;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.forpasi {
+    width: 120px;
+    height: 50px;
+    background-image: url(../../assets/forpasi-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+ul li a {
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+ul li a:hover {
+    color: #008080;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #d1a137;
+    transition: width 0.3s ease;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+ul li a.font-bold {
+    font-weight: bold;
+    color: #008080;
+}
+
+ul li a.underline::after {
+    width: 100%;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+
+.language button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.language button:hover {
+    color: #d1a137;
+}
+
+.language button.active {
+    color: #008080;
+    font-weight: bold;
+}
+
+.language span {
+    color: #999;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+        height: auto;
+    }
+
+    .forpasi {
+        width: 100%;
+        margin: none;
+    }
+
+    .hamburger{
+        align-self: center;
+    }
+
+    .language{
+        align-self: center;
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .language {
+        margin-top: 15px;
+    }
+}
+
+

@@ -1,7 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/navbar.css';
-import Carousel from '../Carousel/Carousel';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const Navbar = () => {
@@ -58,7 +57,6 @@ const Navbar = () => {
           <button onClick={() => handleLanguageChange('id')} className={language === 'id' ? 'active' : ''}>ID</button>
         </div>
       </nav>
-      <Carousel language={language}/>
     </>
     
   );

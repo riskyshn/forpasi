@@ -1,3 +1,20 @@
 body {
     font-family: "Open Sans", sans-serif;
 }
+
+.about-b-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    background: #fff;
+    color: #008080;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.about-b-btn:hover {
+    background: #d1a137;
+    color: #fff;
+    transform: scale(1.05);
+}

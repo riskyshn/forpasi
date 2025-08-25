@@ -10,8 +10,8 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     gap: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 30px;
@@ -45,9 +45,22 @@
   .footer-nav a:hover {
     color: #d1a137;
   }
+
+  .social-wrapper{
+    display: flex;
+    gap: 16px;
+  }
+
+  .social-icon-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
   
   .footer-social {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 16px;
   }
   
@@ -69,7 +82,61 @@
     color: #aaa;
     opacity: 0.8;
   }
+
+  .footer-hashtag{
+    text-align: right;
+  }
+
+  .subscribe-email{
+    display: flex;
+    flex-direction: column;
+  }
   
+  .subscribe-email h2 {
+    color: #fff; /* Warna teks di atas input */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .subscribe-email form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Jarak antara input dan tombol */
+    flex-wrap: wrap;
+  }
+  
+  .email-input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 25vw;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .email-input:focus {
+    box-shadow: 0 0 5px #00bcd4;
+  }
+  
+  .subscribe-btn {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: #0097a7;
+  }
+  
+
   /* Responsive */
   @media (max-width: 768px) {
     .footer-content {
@@ -84,3 +151,4 @@
     }
   }
   
+

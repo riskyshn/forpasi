@@ -36,17 +36,27 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/about" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
-              {language === 'en' ? 'About' : 'Tentang'}
+              {language === 'en' ? 'About Us' : 'Tentang Kami'}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
+              {language === 'en' ? 'Strategic Issues' : 'Isu Strategis'}
             </NavLink>
           </li>
           <li>
             <NavLink to="/services" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
-              {language === 'en' ? 'Services' : 'Layanan'}
+              {language === 'en' ? 'Programme' : 'Program'}
             </NavLink>
           </li>
           <li>
             <NavLink to="/contact" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
-              {language === 'en' ? 'Contact' : 'Kontak'}
+              {language === 'en' ? 'News' : 'Berita'}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
+              {language === 'en' ? 'Support Us' : 'Dukung Kami'}
             </NavLink>
           </li>
         </ul>

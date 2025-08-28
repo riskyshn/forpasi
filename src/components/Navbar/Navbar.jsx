@@ -40,7 +40,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
+            <NavLink to="/strategic-issues" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
               {language === 'en' ? 'Strategic Issues' : 'Isu Strategis'}
             </NavLink>
           </li>

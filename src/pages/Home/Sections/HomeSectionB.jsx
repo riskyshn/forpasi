@@ -1,61 +1,59 @@
 import React from 'react';
-import '../../styles/homeSectionB.css';
-import { useLanguage } from '../../../contexts/LanguageContext';
+import Slider from 'react-slick';
+import '../../styles/homeSectionC.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const HomeSectionB = () => {
-  const { language } = useLanguage();
+const HomeSectionC = () => {
+  const videos = [
+    "https://www.youtube.com/embed/zHgx8OsLiPw?autoplay=1&mute=1&loop=1&playlist=zHgx8OsLiPw",
+    "https://www.youtube.com/embed/hjjkS_wY0q0?autoplay=1&mute=1&loop=1&playlist=hjjkS_wY0q0",
+    "https://www.youtube.com/embed/AlpQetNTvVA?autoplay=1&mute=1&loop=1&playlist=AlpQetNTvVA"
+  ];
 
-  const content = {
-    en: {
-      title: 'Empower Impactful Change with Forpasi',
-      subtitle: 'At Forpasi, we bridge the gap between visionary ideas and sustainable funding. Join a dynamic platform where organizations and individuals unite to create lasting change within their communities.',
-      features: [
-        { icon: '🔍', title: 'Transparent Funding Process', desc: 'Ensuring every contribution is accountable and traceable.' },
-        { icon: '🤝', title: 'Trusted Partnerships', desc: 'We collaborate with reputable partners to maximize impact.' },
-        { icon: '📊', title: 'Data-Driven Impact', desc: 'Measuring success through clear data insights and analytics.' },
-      ],
-      button: 'Join the Movement'
-    },
-    id: {
-      title: 'Memberdayakan Perubahan yang Berdampak dengan Forpasi',
-      subtitle: 'Di Forpasi, kami menjembatani kesenjangan antara ide visioner dan pendanaan berkelanjutan. Bergabunglah dengan platform dinamis di mana organisasi dan individu bersatu untuk menciptakan perubahan yang langgeng di komunitas mereka.',
-      features: [
-        { icon: '🔍', title: 'Proses Pendanaan Transparan', desc: 'Memastikan setiap kontribusi dapat dipertanggungjawabkan dan dapat dilacak.' },
-        { icon: '🤝', title: 'Kemitraan Terpercaya', desc: 'Kami berkolaborasi dengan mitra terpercaya untuk memaksimalkan dampak.' },
-        { icon: '📊', title: 'Dampak Berbasis Data', desc: 'Mengukur kesuksesan melalui wawasan dan analitik data yang jelas.' },
-      ],
-      button: 'Bergabung dengan Gerakan Ini'
-    }
+  // Custom tombol next
+  const NextArrow = ({ onClick }) => (
+    <div className="slick-arrow slick-next" onClick={onClick}>
+      ❯
+    </div>
+  );
+
+  // Custom tombol prev
+  const PrevArrow = ({ onClick }) => (
+    <div className="slick-arrow slick-prev" onClick={onClick}>
+      ❮
+    </div>
+  );
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, // 3 detik
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
-  const current = content[language];
-
   return (
-    <section className="home-section-b">
-      <div className="section-b-content">
-        <div className="text-content">
-          <h2 className="fade-in">{current.title}</h2>
-          <p className="fade-in-delay">{current.subtitle}</p>
-
-          <div className="features-b">
-            {current.features.map((feature, index) => (
-              <div className="feature-item zoom-in" key={index}>
-                <span role="img" aria-label="icon">{feature.icon}</span>
-                <h3>{feature.title}</h3>
-                <p>{feature.desc}</p>
-              </div>
-            ))}
+    <section className="home-section-c">
+      <Slider {...settings} className="video-carousel">
+        {videos.map((video, index) => (
+          <div key={index} className="video-slide">
+            <iframe
+              src={video}
+              title={`YouTube video ${index}`}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            ></iframe>
           </div>
-
-          <button className="cta-button-b fade-in-delay">{current.button}</button>
-        </div>
-
-        <div className="image-content slide-in-right">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Empowering Communities" />
-        </div>
-      </div>
+        ))}
+      </Slider>
     </section>
   );
 };
 
-export default HomeSectionB;
+export default HomeSectionC;

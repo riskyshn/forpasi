@@ -1,32 +1,32 @@
 import { useState, useEffect } from 'react';
 import '../styles/carousel.css';
-import ImageA from '../../assets/carousel-1.jpg';
-import ImageB from '../../assets/carousel-2.jpg';
-import ImageC from '../../assets/carousel-3.jpg';
+import ImageA from '../../assets/forpasi-aset-1.JPEG';
+import ImageB from '../../assets/forpasi-aset-1.JPEG';
+import ImageC from '../../assets/forpasi-aset-1.JPEG';
 import { useLanguage } from '../../contexts/LanguageContext';
 const images = [
   { 
     src: ImageA, 
     alt: 'Gambar 1', 
     text: { 
-      en: 'Welcome to Forpasi', 
-      id: 'Selamat Datang di Forpasi' 
+      en: 'Protecting the environment is a form of defending the country', 
+      id: 'Jaga lingkungan adalah bentuk bela Negara' 
     }
   },
   { 
     src: ImageB, 
     alt: 'Gambar 2', 
     text: { 
-      en: 'Explore Our Services', 
-      id: 'Jelajahi Layanan Kami' 
+      en: 'Nurturing Hope Towards a Sustainable Indonesia', 
+      id: 'Merawat Asa Menuju Indonesia Lestari' 
     }
   },
   { 
     src: ImageC, 
     alt: 'Gambar 3', 
     text: { 
-      en: 'Join Us Now', 
-      id: 'Bergabunglah Bersama Kami' 
+      en: 'Moderate constructive and non-partisan waste discussions', 
+      id: 'Memoderasi diskusi persampahan yang konstruktif dan non-partisan' 
     }
   }
 ];

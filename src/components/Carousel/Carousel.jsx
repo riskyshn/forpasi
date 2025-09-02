@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import '../styles/carousel.css';
 import ImageA from '../../assets/forpasi-aset-1.JPEG';
-import ImageB from '../../assets/forpasi-aset-1.JPEG';
-import ImageC from '../../assets/forpasi-aset-1.JPEG';
+import ImageB from '../../assets/forpasi-aset-2.jpg';
+import ImageC from '../../assets/forpasi-aset-3.JPG';
 import { useLanguage } from '../../contexts/LanguageContext';
 const images = [
   { 

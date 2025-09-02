@@ -77,6 +77,13 @@ const AboutSectionA = () => {
 
   const current = content[language] || content.id;
 
+  // Komponen Placeholder
+  const ImagePlaceholder = () => (
+    <div className="image-placeholder">
+      (Space untuk foto di about section menyusul)
+    </div>
+  );
+
   return (
     <section className="about-section">
       <div className="about-container">
@@ -97,24 +104,18 @@ const AboutSectionA = () => {
             </ul>
 
             <div className="negative-news-space">
-              <p>[Space untuk Foto-foto Berita Negatif]</p>
+              <p>[Space untuk Foto-foto nanti]</p>
             </div>
           </div>
           <div className="intro-image">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg"
-              alt="Forpasi Background"
-            />
+            <ImagePlaceholder />
           </div>
         </div>
 
         {/* Visi Misi */}
         <div className="about-mission fade-in">
           <div className="mission-image">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg"
-              alt="Visi Misi"
-            />
+            <ImagePlaceholder />
           </div>
           <div className="mission-text">
             <h3>{current.visiMisiTitle}</h3>
@@ -133,10 +134,7 @@ const AboutSectionA = () => {
         {/* Konsep Indonesia Lestari */}
         <div className="about-lestari fade-in">
           <div className="lestari-image">
-            <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-              alt="Indonesia Lestari"
-            />
+            <ImagePlaceholder />
           </div>
           <div className="lestari-text">
             <h3>{current.lestariTitle}</h3>

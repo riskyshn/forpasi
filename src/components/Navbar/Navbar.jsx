@@ -45,17 +45,17 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/services" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
+            <NavLink to="/programme" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
               {language === 'en' ? 'Programme' : 'Program'}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
+            <NavLink to="/news" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
               {language === 'en' ? 'News' : 'Berita'}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
+            <NavLink to="/support-us" className={({ isActive }) => isActive ? 'font-bold underline' : ''}>
               {language === 'en' ? 'Support Us' : 'Dukung Kami'}
             </NavLink>
           </li>

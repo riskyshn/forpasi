@@ -5,7 +5,7 @@ const LanguageContext = createContext();
 
 // 2. Provider untuk membungkus aplikasi
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en'); // default ke 'en'
+  const [language, setLanguage] = useState('id'); // default ke 'id'
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
